@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjuntos</title>
+    <script src="./Conjuntos.js" defer></script>
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <div class="row">
+                <h4 class="nav_title">Alan Perez</h4>
+            </div>
+        </nav>
+        <header>
+            <h1 class="header__title">Conjuntos</h1>
+            <p class="header__para">
+              En matemáticas, un conjunto es una colección de elementos considerada
+              en sí misma como un objeto. Los elementos de un conjunto, pueden ser
+              las siguientes: personas, números, colores, letras, figuras, etc. Se
+              dice que un elemento (o miembro) pertenece al conjunto si está
+              definido como incluido de algún modo dentro de él.
+            </p>
+          </header>
+        </section>
+        <main>
+          <section id="interseccion">
+            <div class="container">
+              <div class="row">
+                <h2 class="section__title">Interseccion</h2>
+                <p class="section__para">
+                    En teoría de conjuntos, la intersección de dos conjuntos es una operación que resulta en otro conjunto que contiene los elementos comunes a los conjuntos de partida.
+                </p>
+                <form class="section__form">
+                  <div class="form__group">
+                    <label class="form__label">A = </label>
+                    <input
+                      type="text"
+                      class="form__input interseccion interseccion__a"
+                    />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">B = </label>
+                    <input
+                      type="text"
+                      class="form__input interseccion interseccion__b"
+                    />
+                  </div>
+                  <input
+                    type="button"
+                    value="Intersectar"
+                    class="form__btn"
+                    onclick="interseccion()"
+                  />
+                  <div class="form__group">
+                    <label class="form__label">A&Intersection;B = </label>
+                    <textarea
+                      type="text"
+                      class="form__input interseccion interseccion__resultado"
+                      readonly
+                    ></textarea>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="button"
+                      value="Ejemplo 1"
+                      class="form__btn"
+                      onclick="ejemplo(1, '.interseccion')"
+                    />
+                    <input
+                      type="button"
+                      value="Ejemplo 2"
+                      class="form__btn"
+                      onclick="ejemplo(2, '.interseccion')"
+                    />
+                    <input
+                      type="button"
+                      value="Reiniciar"
+                      class="form__btn"
+                      onclick="reiniciar('.interseccion')"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section id="union">
+            <div class="container">
+              <div class="row">
+                <h2 class="section__title">Union</h2>
+                <p class="section__para">
+                    En la teoría de conjuntos, la unión de dos conjuntos es una operación que resulta en otro conjunto, cuyos elementos son los mismos de los conjuntos iniciales.
+                </p>
+                <form class="section__form">
+                  <div class="form__group">
+                    <label class="form__label">A = </label>
+                    <input type="text" class="form__input union union__a" />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">B = </label>
+                    <input type="text" class="form__input union union__b" />
+                  </div>
+                  <input
+                    type="button"
+                    value="Unir"
+                    class="form__btn"
+                    onclick="union()"
+                  />
+                  <div class="form__group">
+                    <label class="form__label">A&Union;B = </label>
+                    <textarea
+                      type="text"
+                      class="form__input union union__resultado"
+                      readonly
+                    ></textarea>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="button"
+                      value="Ejemplo 1"
+                      class="form__btn"
+                      onclick="ejemplo(1, '.union')"
+                    />
+                    <input
+                      type="button"
+                      value="Ejemplo 2"
+                      class="form__btn"
+                      onclick="ejemplo(2, '.union')"
+                    />
+                    <input
+                      type="button"
+                      value="Reiniciar"
+                      class="form__btn"
+                      onclick="reiniciar('.union')"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section id="diferencia">
+            <div class="container">
+              <div class="row">
+                <h2 class="section__title">Diferencia</h2>
+                <p class="section__para">
+                    Diferencia de conjuntos: La diferencia de un conjunto respecto a otro es a igual a los elementos del primer conjunto menos los elementos del segundo.
+                </p>
+                <form class="section__form">
+                  <div class="form__group">
+                    <label class="form__label">A = </label>
+                    <input
+                      type="text"
+                      class="form__input diferencia diferencia__a"
+                    />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">B = </label>
+                    <input
+                      type="text"
+                      class="form__input diferencia diferencia__b"
+                    />
+                  </div>
+                  <input
+                    type="button"
+                    value="Diferencia"
+                    class="form__btn"
+                    onclick="diferencia()"
+                  />
+                  <div class="form__group">
+                    <label class="form__label">A-B = </label>
+                    <textarea
+                      type="text"
+                      class="form__input diferencia diferencia__resultado diferencia__resultado--a"
+                      readonly
+                    ></textarea>
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">B-A = </label>
+                    <textarea
+                      type="text"
+                      class="form__input diferencia diferencia__resultado diferencia__resultado--b"
+                      readonly
+                    ></textarea>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="button"
+                      value="Ejemplo 1"
+                      class="form__btn"
+                      onclick="ejemplo(1, '.diferencia')"
+                    />
+                    <input
+                      type="button"
+                      value="Ejemplo 2"
+                      class="form__btn"
+                      onclick="ejemplo(2, '.diferencia')"
+                    />
+                    <input
+                      type="button"
+                      value="Reiniciar"
+                      class="form__btn"
+                      onclick="reiniciar('.diferencia')"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section id="complemento">
+            <div class="container">
+              <div class="row">
+                <h2 class="section__title">Complemento</h2>
+                <p class="section__para">
+                    El complemento de un conjunto o conjunto complementario es otro conjunto que contiene todos los elementos que no están en el conjunto original.
+                </p>
+                <form class="section__form">
+                  <div class="form__group">
+                    <label class="form__label">A = </label>
+                    <input
+                      type="text"
+                      class="form__input complemento complemento__a"
+                    />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">U = </label>
+                    <input
+                      type="text"
+                      class="form__input complemento complemento__b"
+                    />
+                  </div>
+                  <input
+                    type="button"
+                    value="Complemento"
+                    class="form__btn"
+                    onclick="complemento()"
+                  />
+                  <div class="form__group">
+                    <label class="form__label">A<sup>c</sup> = </label>
+                    <textarea
+                      type="text"
+                      class="form__input complemento complemento__resultado"
+                      readonly
+                    ></textarea>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="button"
+                      value="Ejemplo 1"
+                      class="form__btn"
+                      onclick="ejemplo(3, '.complemento')"
+                    />
+                    <input
+                      type="button"
+                      value="Ejemplo 2"
+                      class="form__btn"
+                      onclick="ejemplo(4, '.complemento')"
+                    />
+                    <input
+                      type="button"
+                      value="Reiniciar"
+                      class="form__btn"
+                      onclick="reiniciar('.complemento')"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </main>
+      </body>
+    </html>
+    </section>
+</body>
+</html>
